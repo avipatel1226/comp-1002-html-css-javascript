@@ -1,0 +1,128 @@
+<!-- 
+  Author: Avi Patel
+  Date: November 2025
+  Course: COMP 1002 HTML,CSS,JAVASCRIPT
+  Assignment 1 - The Pizza Company
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The HTML Pizza Company</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>🍕 The HTML Pizza Company</h1>
+    <p>Build and order your dream pizza — fast, fresh, and fully customizable!</p>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <section class="intro">
+      <img src="images/pizza.png" alt="A delicious margherita pizza">
+    </section>
+
+    <h2>Order Form</h2>
+
+<form action="thankyou.html" method="get">
+      <!-- CUSTOMER INFORMATION -->
+      <fieldset>
+        <legend>Customer Information</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+      </fieldset>
+
+      <!-- PIZZA DETAILS -->
+      <fieldset>
+        <legend>Pizza Details</legend>
+
+        <label for="quantity">Number of Pizzas:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+
+        <label for="size">Pizza Size:</label>
+        <select id="size" name="size">
+          <option value="small">Small (8")</option>
+          <option value="medium" selected>Medium (12")</option>
+          <option value="large">Large (16")</option>
+        </select>
+
+        <div class="radio-group">
+          <p>Shape:</p>
+          <label><input type="radio" name="shape" value="round" checked> Round</label>
+          <label><input type="radio" name="shape" value="square"> Square</label>
+        </div>
+
+        <div class="radio-group">
+          <p>Crust Type:</p>
+          <label><input type="radio" name="crust" value="thin" checked> Thin</label>
+          <label><input type="radio" name="crust" value="deep"> Deep Dish</label>
+          <label><input type="radio" name="crust" value="stuffed"> Stuffed</label>
+        </div>
+
+        <div class="checkbox-group">
+          <p>Toppings:</p>
+          <label><input type="checkbox" name="topping" value="pepperoni"> Pepperoni</label>
+          <label><input type="checkbox" name="topping" value="mushrooms"> Mushrooms</label>
+          <label><input type="checkbox" name="topping" value="onions"> Onions</label>
+          <label><input type="checkbox" name="topping" value="greenpeppers"> Green Peppers</label>
+          <label><input type="checkbox" name="topping" value="olives"> Olives</label>
+          <label><input type="checkbox" name="topping" value="bacon"> Bacon</label>
+        </div>
+      </fieldset>
+
+      <!-- ORDER TYPE -->
+      <fieldset>
+        <legend>Order Type</legend>
+        <label><input type="radio" name="orderType" value="delivery" checked> Delivery</label>
+        <label><input type="radio" name="orderType" value="takeout"> Take-Out</label>
+        <label><input type="radio" name="orderType" value="eatIn"> Eat-In</label>
+      </fieldset>
+
+      <!-- SPECIAL REQUESTS -->
+      <fieldset>
+        <legend>Special Requests</legend>
+        <textarea name="special" rows="3" placeholder="Any special instructions?"></textarea>
+      </fieldset>
+
+      <!-- TAKE IT FURTHER -->
+      <fieldset>
+        <legend>Extras</legend>
+        <label for="deliveryDate">Preferred Delivery Date:</label>
+        <input type="date" id="deliveryDate" name="deliveryDate">
+
+        <label for="spice">Spice Level:</label>
+        <input type="range" id="spice" name="spice" min="0" max="10">
+
+        <label for="color">Choose Box Color:</label>
+        <input type="color" id="color" name="color" value="#ff4d4d">
+      </fieldset>
+
+      <!-- FORM BUTTONS -->
+      <div class="buttons">
+        <input type="submit" value="Place Order">
+        <input type="reset" value="Reset Form">
+      </div>
+    </form>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 The HTML Pizza Company — Designed by Avi Patel</p>
+  </footer>
+</body>
+</html>
